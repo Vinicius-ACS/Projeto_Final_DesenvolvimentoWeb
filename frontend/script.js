@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/produtos";
+const API_URL = "https://controle-estoque-api-0awi.onrender.com/produtos";
 
 const listaProdutos = document.getElementById("listaProdutos");
 const formProduto = document.getElementById("formProduto");
