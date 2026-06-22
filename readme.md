@@ -6,6 +6,32 @@ O sistema permite cadastrar, listar, atualizar e excluir produtos de um estoque,
 
 ---
 
+## Links do Projeto
+
+Frontend hospedado no Netlify:
+
+https://peaceful-trifle-d85b7a.netlify.app/
+
+Backend hospedado no Render:
+
+https://controle-estoque-api-0awi.onrender.com
+
+Rota de produtos da API:
+
+https://controle-estoque-api-0awi.onrender.com/produtos## Links do Projeto
+
+Frontend hospedado no Netlify:
+
+https://peaceful-trifle-d85b7a.netlify.app/
+
+Backend hospedado no Render:
+
+https://controle-estoque-api-0awi.onrender.com
+
+Rota de produtos da API:
+
+https://controle-estoque-api-0awi.onrender.com/produtos
+
 ## Tecnologias Utilizadas
 
 ### Frontend
