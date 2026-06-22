@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3b164d;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+input,
+textarea,
+button {
+  padding: 12px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  background: #8a006a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background: #6d0054;
+}
+
+.produto {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.produto h3 {
+  margin-bottom: 8px;
+}
+
+.produto p {
+  margin: 5px 0;
+}
+
+.botao-excluir {
+  background: #b00020;
+  margin-top: 10px;
+}
+
+.botao-excluir:hover {
+  background: #7d0017;
+}
