@@ -7,12 +7,33 @@ datasource db {
   url      = "file:./dev.db"
 }
 
+enum TipoMov {
+  ENTRADA
+  SAIDA
+}
+
 model Produto {
   id         Int      @id @default(autoincrement())
+  sku        String?  @unique
   nome       String
   categoria  String
-  quantidade Int
+  quantidade Int      @default(0)
   preco      Float
+  descricao  String?
+  fornecedor String?
+  localizacao String?
+  minimo     Int      @default(0)
+  createdAt  DateTime @default(now())
+
+  movimentacoes Movimentacao[]
+}
+
+model Movimentacao {
+  id         Int      @id @default(autoincrement())
+  produtoId  Int
+  produto    Produto  @relation(fields: [produtoId], references: [id])
+  tipo       TipoMov
+  quantidade Int
   descricao  String?
   createdAt  DateTime @default(now())
 }
