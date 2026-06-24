@@ -3,13 +3,30 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  // Use DATABASE_URL (Postgres) in production; fallback to SQLite for simple local dev
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 enum TipoMov {
   ENTRADA
   SAIDA
+}
+
+enum Role {
+  ADMIN
+  OPERATOR
+  VIEWER
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  role         Role     @default(VIEWER)
+  createdAt    DateTime @default(now())
+
+  movimentacoes Movimentacao[]
 }
 
 model Produto {
@@ -32,6 +49,8 @@ model Movimentacao {
   id         Int      @id @default(autoincrement())
   produtoId  Int
   produto    Produto  @relation(fields: [produtoId], references: [id])
+  userId     Int?
+  user       User?    @relation(fields: [userId], references: [id])
   tipo       TipoMov
   quantidade Int
   descricao  String?
